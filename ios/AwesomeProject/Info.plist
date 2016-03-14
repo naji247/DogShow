@@ -39,6 +39,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Pacifico.ttf</string>
+		<string>Lato-Light.ttf</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
