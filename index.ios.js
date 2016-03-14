@@ -15,16 +15,19 @@ class AwesomeProject extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to Derek Sucks Mad Larry Cock!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+        <TitleView title="DogShow"></TitleView>
+        <View style={styles.dog}>
+        </View>
+      </View>
+    );
+  }
+}
+
+class TitleView extends Component {
+  render() {
+    return (
+      <View style={styles.titleView}>
+        <Text style={styles.titleFont}>{this.props.title}</Text>
       </View>
     );
   }
@@ -33,19 +36,19 @@ class AwesomeProject extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+
+  titleView: {
+    paddingTop: 20,
+    paddingBottom: 10,
+    backgroundColor: '#9E7BFF',
   },
-  instructions: {
+  titleFont: {
     textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+    fontFamily: 'Pacifico',
+    color: 'white',
+    fontSize: 30,
   },
 });
 
