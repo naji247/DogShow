@@ -3,12 +3,13 @@
 import React, {
   Component,
   Image,
-  StyleSheet,
   TouchableElement,
   TouchableHighlight,
   TouchableNativeFeedback,
   View
 } from 'react-native';
+
+var styles = require('./LeaderButton.css.js');
 
 var LeaderButton = React.createClass({
   buttonClicked: function() {
@@ -32,16 +33,5 @@ var LeaderButton = React.createClass({
         );
   }
 });       
-
-const styles = StyleSheet.create({
-  leaderBoardRibbon: {
-    height: 35,
-    width: 35,
-  },
-
-  leaderBoardView: {
-    margin: 15,
-  }
-});
 
 module.exports = LeaderButton;

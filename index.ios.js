@@ -8,17 +8,33 @@
 import React, {
   AppRegistry,
   Component,
-  StyleSheet,
-  Text,
-  View
+  Navigator
 } from 'react-native';
 
-var RankScreen = require('./RankScreen.ios.js');
+var RankScreen = require('./src/ios/RankScreen/RankScreen.ios.js');
 
 class DogShow extends Component {
   render() {
     return (
-        <RankScreen></RankScreen>
+				<Navigator
+						initialRoute={{name: 'RankScreen', index: 0}}
+						renderScene={(route, navigator) =>
+              <RankScreen
+								onForward={() => {
+									var nextIndex = route.index + 1;
+									navigator.push({
+										name: 'Leaderboard',
+										index: nextIndex,
+									});
+								}}
+								onBack={() => {
+									if (route.index > 0) {
+										navigator.pop();
+									}
+								}}
+							/>
+						}
+					/>
     );
   }
 }

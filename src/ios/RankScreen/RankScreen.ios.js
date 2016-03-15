@@ -2,14 +2,14 @@
 'use strict';
 import React, {
   Component,
-  StyleSheet,
   Text,
   View
 } from 'react-native';
 
-var TitleView = require('./TitleView.ios.js');
-var LeaderButton = require('./LeaderButton.ios.js');
-var DogView = require('./DogView.ios.js');
+var TitleView = require('../TitleView/TitleView.ios.js');
+var LeaderButton = require('../LeaderButton/LeaderButton.ios.js');
+var DogView = require('../DogView/DogView.ios.js');
+var styles = require('./RankScreen.css.js');
 
 class RankScreen extends Component {
   render() {
@@ -33,35 +33,5 @@ class RankScreen extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#FEFCFF',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    position: 'relative',
-  },
-  
-  orTextWrapper: {
-    top: 85,
-    bottom: 0,
-    left: 0,
-    right: 0,
-    position: 'absolute',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
-  defaultText: {
-    backgroundColor: "#9E7BFF",
-    padding: 10,
-    borderRadius: 22,
-    color: 'white',
-    fontFamily: 'Lato',
-    fontSize: 20,
-    overflow: 'hidden',
-  },
-});
 
 module.exports = RankScreen;

@@ -3,8 +3,9 @@
 import React, {
   Component,
   Image,
-  StyleSheet,
 } from 'react-native';
+
+var styles = require('./DogView.css.js');
 
 class DogView extends Component {
   render() {
@@ -14,11 +15,5 @@ class DogView extends Component {
     )
   }
 }
-
-const styles = StyleSheet.create({
-  dogView: {
-    flex: 1,
-  },
-});
 
 module.exports = DogView;
