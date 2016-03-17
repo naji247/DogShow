@@ -6,7 +6,7 @@ import React, {
 
 const DogViewCSS = StyleSheet.create({
   dogView: {
-    flex: 1,
+    flex: .5,
   },
 });
 

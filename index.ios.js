@@ -12,6 +12,7 @@ import React, {
 } from 'react-native';
 
 var RankScreen = require('./src/ios/RankScreen/RankScreen.ios.js');
+var LeaderScreen = require('./src/ios/LeaderScreen/LeaderScreen.ios.js');
 
 class DogShow extends Component {
   render() {
@@ -19,7 +20,7 @@ class DogShow extends Component {
 				<Navigator
 						initialRoute={{name: 'RankScreen', index: 0}}
 						renderScene={(route, navigator) =>
-              <RankScreen
+              <LeaderScreen
 								onForward={() => {
 									var nextIndex = route.index + 1;
 									navigator.push({
