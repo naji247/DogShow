@@ -9,7 +9,7 @@ const TitleViewCSS = StyleSheet.create({
     paddingTop: 20,
     paddingBottom: 10,
     backgroundColor: '#9E7BFF',
-    flex: .18,
+    height: 85,
     flexDirection: 'row',
   },
 
