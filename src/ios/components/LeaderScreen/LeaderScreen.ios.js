@@ -24,7 +24,7 @@ var LeaderScreen = React.createClass({
   render: function() {
     return (
       <View style={styles.container}>
-        <TitleView title="DogShow"></TitleView>
+        <TitleView button="rank" title="DogShow"></TitleView>
         <ListView
           dataSource={this.state.dataSource}
           renderRow={this._renderRow}

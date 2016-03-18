@@ -12,7 +12,7 @@ class DogView extends Component {
     var dog = this.props.dog;
     return (
         <Image style={styles.dogView} source={{uri: dog.src}} ></Image>
-    )
+    );
   }
 }
 
