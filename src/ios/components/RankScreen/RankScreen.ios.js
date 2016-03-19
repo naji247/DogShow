@@ -6,20 +6,28 @@ import React, {
   View
 } from 'react-native';
 
+import {bindActionCreators} from 'redux';
+import * as rankScreenActions from '../../actions/rankScreenActions.js';
+import { connect } from 'react-redux';
+
 var TitleView = require('../TitleView/TitleView.ios.js');
 var LeaderButton = require('../LeaderButton/LeaderButton.ios.js');
 var DogView = require('../DogView/DogView.ios.js');
 var styles = require('./RankScreen.css.js');
 
-export default class RankScreen extends Component {
-  render() {
-    var dog1 = {
-      src: "http://puppyintraining.com/wp-content/uploads/2013/01/golden-retriever-clover.jpg"
-    };
+class RankScreen extends Component {
+  constructor(props) {
+    super(props);
+  }
 
-    var dog2 = {
-      src: "http://www.petpicturegallery.com/pictures/dogs/puppy/118-dog_puppy_cute_puppy.jpg"
-    };
+  componentDidMount() {
+    const { fetchRivals } = this.props.actions;
+    fetchRivals();
+  }
+
+  render() {
+    const { state, actions } = this.props;
+    const { dog1, dog2 } = state.rankScreen;
 
     return (
       <View style={styles.container}>
@@ -34,3 +42,10 @@ export default class RankScreen extends Component {
   }
 }
 
+export default connect(state => ({
+  state: state
+}),
+    (dispatch) => ({
+      actions: bindActionCreators(rankScreenActions, dispatch)
+    })
+    )(RankScreen);

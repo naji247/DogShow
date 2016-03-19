@@ -1,16 +1,16 @@
 'use strict';
 
 import React, { Component, StyleSheet } from 'react-native';
-import { createStore, applyMiddleware, combineReducers } from 'redux';
+import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 
 import * as reducers from '../reducers';
 import DogShowApp from './dogshowApp.js';
 
-const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 const reducer = combineReducers(reducers);
-const store = createStoreWithMiddleware(reducer);
+const store = compose(applyMiddleware(thunk))(createStore)(reducer);
+
 
 export default class Application extends React.Component {
   render() {
