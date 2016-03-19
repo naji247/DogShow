@@ -7,9 +7,9 @@
     "flow": "flow; [[ $?=0||$?=2 ]]"
   },
   "dependencies": {
-    "react-native": "^0.21.0",
-    "react-redux": "^4.4.1",
-    "redux": "^3.3.1"
+    "react": "^0.14.7",
+    "react-native": "0.22.0-rc4",
+    "react-native-router-flux": "^3.0.9"
   },
   "devDependencies": {
     "flow-bin": "^0.22.1"

@@ -19,7 +19,6 @@ const TitleViewCSS = StyleSheet.create({
     color: 'white',
     fontSize: 30,
     flex: 1,
-    marginLeft: 70
   },
 });
 

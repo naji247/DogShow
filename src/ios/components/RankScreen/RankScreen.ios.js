@@ -11,7 +11,7 @@ var LeaderButton = require('../LeaderButton/LeaderButton.ios.js');
 var DogView = require('../DogView/DogView.ios.js');
 var styles = require('./RankScreen.css.js');
 
-class RankScreen extends Component {
+export default class RankScreen extends Component {
   render() {
     var dog1 = {
       src: "http://puppyintraining.com/wp-content/uploads/2013/01/golden-retriever-clover.jpg"
@@ -23,7 +23,7 @@ class RankScreen extends Component {
 
     return (
       <View style={styles.container}>
-        <TitleView title="DogShow"></TitleView>
+        <TitleView button="leader" title="DogShow"></TitleView>
           <DogView dog={dog1}></DogView>
           <DogView dog={dog2}></DogView>
         <View style={styles.orTextWrapper}>
@@ -34,4 +34,3 @@ class RankScreen extends Component {
   }
 }
 
-module.exports = RankScreen;
