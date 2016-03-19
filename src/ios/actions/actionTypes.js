@@ -1,0 +1,3 @@
+export const DOG_FETCH_INIT = 'DOG: FETCH_INIT';
+export const DOG_FETCH_SUCCESS = 'DOG: FETCH_SUCCESS';
+export const DOG_FETCH_FAIL = 'DOG: FETCH_FAIL';
