@@ -1,36 +1,71 @@
 //@flow
 'use strict';
 import React, {
+  Dimensions,
   Component,
+  TouchableHighlight,
   Text,
   View
 } from 'react-native';
+
+import {bindActionCreators} from 'redux';
+import * as rankScreenActions from '../../actions/rankScreenActions.js';
+import { connect } from 'react-redux';
 
 var TitleView = require('../TitleView/TitleView.ios.js');
 var LeaderButton = require('../LeaderButton/LeaderButton.ios.js');
 var DogView = require('../DogView/DogView.ios.js');
 var styles = require('./RankScreen.css.js');
 
-export default class RankScreen extends Component {
-  render() {
-    var dog1 = {
-      src: "http://puppyintraining.com/wp-content/uploads/2013/01/golden-retriever-clover.jpg"
-    };
+class RankScreen extends Component {
+  constructor(props) {
+    super(props);
+  }
 
-    var dog2 = {
-      src: "http://www.petpicturegallery.com/pictures/dogs/puppy/118-dog_puppy_cute_puppy.jpg"
-    };
+  componentDidMount() {
+    const { fetchRivals } = this.props.actions;
+    fetchRivals();
+  }
+
+  vote(e) {
+    const { state, actions } = this.props;
+    const { dog1, dog2 } = state.rankScreen;
+    var middle = 85 + .5 * (Dimensions.get('window').height - 85);
+
+    if (e.nativeEvent.pageY <= middle) {
+      //Action: Select top dog as winner
+      actions.rivalVote(dog1, dog2);
+      
+    } else {
+      //Action: Select bottom dog as winner
+      actions.rivalVote(dog2, dog1);
+    }
+
+    //Action: Get new dogs
+    actions.fetchRivals();
+  }
+
+  render() {
+    const { state, actions } = this.props;
+    const { dog1, dog2 } = state.rankScreen;
 
     return (
       <View style={styles.container}>
         <TitleView button="leader" title="DogShow"></TitleView>
           <DogView dog={dog1}></DogView>
           <DogView dog={dog2}></DogView>
-        <View style={styles.orTextWrapper}>
+        <TouchableHighlight onPress={this.vote.bind(this)} style={styles.orTextWrapper}>
           <Text style={styles.defaultText}>OR</Text>
-        </View>
+        </TouchableHighlight>
       </View>
     );
   }
 }
 
+export default connect(state => ({
+  state: state
+}),
+    (dispatch) => ({
+      actions: bindActionCreators(rankScreenActions, dispatch)
+    })
+    )(RankScreen);
