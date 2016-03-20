@@ -1,3 +1,6 @@
+//Rival actions
 export const RIVAL_FETCH_INIT = 'RIVAL: FETCH_INIT';
 export const RIVAL_FETCH_SUCCESS = 'RIVAL: FETCH_SUCCESS';
 export const RIVAL_FETCH_FAIL = 'RIVAL: FETCH_FAIL';
+
+export const RIVAL_VOTE_INIT = 'RIVAL: VOTE_INIT';

@@ -22,6 +22,12 @@ export function rivalFetchFail(error) {
   };
 }
 
+export function rivalVoteInit() {
+  return {
+    type: types.RIVAL_VOTE_INIT
+  };
+}
+
 export function fetchRivals() {
   return function (dispatch) {
     dispatch(rivalFetchInit())
@@ -36,3 +42,41 @@ export function fetchRivals() {
       });
   }
 }
+
+export function rivalVote(winner, loser) {
+  return function (dispatch) {
+    dispatch(rivalVoteInit())
+    //TODO: Calculate new winner and loser
+    
+    //Submit two requests via Fetch call
+    //This is because our RESTful API requires
+    //one API call for both dogs
+    return Promise.all([
+        dispatch(updateRival(winner)),
+        dispatch(updateRival(loser))
+    ]).then(() => {
+      console.log("Successfully voted.");
+    }).catch((error) => {
+      console.log(error);
+    });
+  }
+}
+
+export function updateRival(dog) {
+  return function (dispatch) {
+    return fetch(config.put_rival_dogs_url(dog), {
+      method: 'PUT',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(dog)})
+      .then(response => response.json())
+      .then(json => {
+        console.log("Successfully updated dog.");
+      }).catch( (error) => {
+        console.log("Failed to updated dog.");
+      });
+  }
+}
+

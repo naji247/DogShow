@@ -1,7 +1,9 @@
 //@flow
 'use strict';
 import React, {
+  Dimensions,
   Component,
+  TouchableHighlight,
   Text,
   View
 } from 'react-native';
@@ -25,6 +27,24 @@ class RankScreen extends Component {
     fetchRivals();
   }
 
+  vote(e) {
+    const { state, actions } = this.props;
+    const { dog1, dog2 } = state.rankScreen;
+    var middle = 85 + .5 * (Dimensions.get('window').height - 85);
+
+    if (e.nativeEvent.pageY <= middle) {
+      //Action: Select top dog as winner
+      actions.rivalVote(dog1, dog2);
+      
+    } else {
+      //Action: Select bottom dog as winner
+      actions.rivalVote(dog2, dog1);
+    }
+
+    //Action: Get new dogs
+    actions.fetchRivals();
+  }
+
   render() {
     const { state, actions } = this.props;
     const { dog1, dog2 } = state.rankScreen;
@@ -34,9 +54,9 @@ class RankScreen extends Component {
         <TitleView button="leader" title="DogShow"></TitleView>
           <DogView dog={dog1}></DogView>
           <DogView dog={dog2}></DogView>
-        <View style={styles.orTextWrapper}>
+        <TouchableHighlight onPress={this.vote.bind(this)} style={styles.orTextWrapper}>
           <Text style={styles.defaultText}>OR</Text>
-        </View>
+        </TouchableHighlight>
       </View>
     );
   }
