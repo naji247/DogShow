@@ -15,6 +15,6 @@ In order to install this app you will have to first:
 
 2) Run npm i
 
-3) Install the fonts Pacifico and Lato-Light with [this guide](https://medium.com/@dabit3/adding-custom-fonts-to-react-native-b266b41bff7f#.2qdnbpdok).
+3) Build the project via XCode
 
-4) Build the project via XCode
+NOTE: If you're having font errors, install the fonts Pacifico and Lato-Light with [this guide](https://medium.com/@dabit3/adding-custom-fonts-to-react-native-b266b41bff7f#.2qdnbpdok).
