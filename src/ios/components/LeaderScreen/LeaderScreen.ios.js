@@ -6,27 +6,37 @@ import React, {
   RecyclerViewBackedScrollView
 } from 'react-native';
 
+import {bindActionCreators} from 'redux';
+import * as leaderScreenActions from '../../actions/leaderScreenActions.js';
+import { connect } from 'react-redux';
+
 var TitleView = require('../TitleView/TitleView.ios.js');
 var LeaderButton = require('../LeaderButton/LeaderButton.ios.js');
 var DogView = require('../DogView/DogView.ios.js');
 var styles = require('./LeaderScreen.css.js');
 
 var LeaderScreen = React.createClass({
-  getInitialState: function() {
-    var dogs = [{"_id":"56e90f920d6a56cfce540cb9","reportCount":0,"losses":0,"wins":1,"rating":1200,"src":"http://germanshepherdtribune.com/wp-content/uploads/2015/07/cute-german-shepherd-puppy-hd-wallpapers-desktop-background-images-widescreen.jpg","__v":0},{"_id":"56e9e0e8579aafabe9c1cb67","reportCount":0,"losses":0,"wins":0,"rating":1200,"src":"http://www.petpicturegallery.com/pictures/dogs/puppy/118-dog_puppy_cute_puppy.jpg","__v":0},{"_id":"56e9e2290ee056ffe9ce462e","reportCount":0,"losses":0,"wins":0,"rating":1200,"src":"http://puppyintraining.com/wp-content/uploads/2013/01/golden-retriever-clover.jpg","__v":0}];
+  componentDidMount: function() {
+    const { actions } =  this.props;
+    const { dogs } = this.props.state.leaderScreen;
 
-    var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-    return {
-      dataSource: ds.cloneWithRows(dogs),
-    };
- },
+    //Make sure we haven't loaded the leader board already.
+    if (dogs.length == 0) {
+      actions.fetchLeaders();
+    }
+  },
 
   render: function() {
+    const { dogs } = this.props.state.leaderScreen;
+
+    var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+    var leaders = ds.cloneWithRows(dogs);
+
     return (
       <View style={styles.container}>
         <TitleView button="rank" title="DogShow"></TitleView>
         <ListView
-          dataSource={this.state.dataSource}
+          dataSource={leaders}
           renderRow={this._renderRow}
           renderScrollComponent={props => <RecyclerViewBackedScrollView style={styles.listView} {...props} />}
         />
@@ -43,4 +53,10 @@ var LeaderScreen = React.createClass({
   }
 });
 
-module.exports = LeaderScreen;
+export default connect(state => ({
+  state: state
+}),
+    (dispatch) => ({
+      actions: bindActionCreators(leaderScreenActions, dispatch)
+    })
+    )(LeaderScreen);
