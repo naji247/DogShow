@@ -3,7 +3,7 @@
 import React, {
   Dimensions,
   Component,
-  TouchableHighlight,
+  TouchableWithoutFeedback,
   Text,
   View
 } from 'react-native';
@@ -54,9 +54,11 @@ class RankScreen extends Component {
         <TitleView button="leader" title="DogShow"></TitleView>
           <DogView dog={dog1}></DogView>
           <DogView dog={dog2}></DogView>
-        <TouchableHighlight onPress={this.vote.bind(this)} style={styles.orTextWrapper}>
+        <TouchableWithoutFeedback onPress={this.vote.bind(this)} style={styles.orTextWrapper}>
+          <View style={styles.orTextWrapper}>
           <Text style={styles.defaultText}>OR</Text>
-        </TouchableHighlight>
+          </View>
+        </TouchableWithoutFeedback>
       </View>
     );
   }
