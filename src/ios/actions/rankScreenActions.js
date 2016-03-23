@@ -43,11 +43,22 @@ export function fetchRivals() {
   }
 }
 
+function updateRivalRatings(winner, loser) {
+    winner.wins++;
+    loser.losses++;
+    var newWinnerRating = winner["rating"] + 400/(winner["wins"] + winner["losses"]) * (1 - 1/(1+ Math.pow(10, (loser["rating"] - winner["rating"])/400)))
+    var newLoserRating = loser["rating"] + 400/(loser["wins"] + loser["losses"]) * (- 1/(1+ Math.pow(10, (winner["rating"] - loser["rating"])/400)));
+    winner["rating"] = newWinnerRating;
+    loser["rating"] = newLoserRating;
+}
+
 export function rivalVote(winner, loser) {
   return function (dispatch) {
     dispatch(rivalVoteInit())
+
     //TODO: Calculate new winner and loser
-    
+    updateRivalRatings(winner, loser);
+
     //Submit two requests via Fetch call
     //This is because our RESTful API requires
     //one API call for both dogs

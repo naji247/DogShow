@@ -20,10 +20,7 @@ var LeaderScreen = React.createClass({
     const { actions } =  this.props;
     const { dogs } = this.props.state.leaderScreen;
 
-    //Make sure we haven't loaded the leader board already.
-    if (dogs.length == 0) {
-      actions.fetchLeaders();
-    }
+    actions.fetchLeaders();
   },
 
   render: function() {
