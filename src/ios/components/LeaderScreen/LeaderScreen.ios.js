@@ -41,10 +41,10 @@ var LeaderScreen = React.createClass({
     );
   },
 
-  _renderRow: function(rowData) {
+  _renderRow: function(rowData, sectionID, rowID) {
     return (
       <View style={styles.row}>
-        <DogView dog={rowData}></DogView>
+        <DogView dog={rowData} rank={parseInt(rowID)+1}></DogView>
       </View>
     );
   }
