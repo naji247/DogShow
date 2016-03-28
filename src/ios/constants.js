@@ -1,5 +1,5 @@
 //URL base for server. May change based on environment
-export const server = 'http://localhost:3000';
+export const server = 'http://ec2-52-53-214-79.us-west-1.compute.amazonaws.com:8080';
 
 //URL to get two dogs to pick from
 //NOTE: May be based on a calculation...
