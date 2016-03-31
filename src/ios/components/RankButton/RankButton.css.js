@@ -6,8 +6,8 @@ import React, {
 
 const RankButtonCSS = StyleSheet.create({
   rankPawPrint: {
-    height: 35,
-    width: 35,
+    height: 30,
+    width: 30,
   },
 
   rankButtonView: {

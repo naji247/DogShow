@@ -17,10 +17,16 @@
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
-		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		764D23A01CAA5791004EF93B /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		764D23AC1CAA5901004EF93B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 764D23AA1CAA5901004EF93B /* LaunchScreen.xib */; };
+		764D23AE1CAA5A8C004EF93B /* Pacifico.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 764D23AD1CAA5A8C004EF93B /* Pacifico.ttf */; };
+		764D23AF1CAA5AD3004EF93B /* Pacifico.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76C490DB1C98A6E30097C489 /* Pacifico.ttf */; };
+		764D23B01CAA5C93004EF93B /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76C490DA1C98A6E30097C489 /* Lato-Light.ttf */; };
+		764D23B21CAA6017004EF93B /* DogShowTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 764D23B11CAA6017004EF93B /* DogShowTitle.png */; };
+		76A88C4C1CAA70BA0010AEE5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76A88C4B1CAA70BA0010AEE5 /* Default-568h@2x.png */; };
 		76C490DC1C98A6E30097C489 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76C490DA1C98A6E30097C489 /* Lato-Light.ttf */; };
 		76C490DD1C98A6E30097C489 /* Pacifico.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76C490DB1C98A6E30097C489 /* Pacifico.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
@@ -121,11 +127,14 @@
 		13B07F961A680F5B00A75B9A /* DogShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = DogShow/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = DogShow/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = DogShow/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = DogShow/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = DogShow/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		764D23AB1CAA5901004EF93B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = DogShow/Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		764D23AD1CAA5A8C004EF93B /* Pacifico.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pacifico.ttf; sourceTree = "<group>"; };
+		764D23B11CAA6017004EF93B /* DogShowTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DogShowTitle.png; sourceTree = "<group>"; };
+		76A88C4B1CAA70BA0010AEE5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		76C490DA1C98A6E30097C489 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		76C490DB1C98A6E30097C489 /* Pacifico.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pacifico.ttf; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
@@ -137,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				764D23A01CAA5791004EF93B /* libReact.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,11 +247,12 @@
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
+				764D23B11CAA6017004EF93B /* DogShowTitle.png */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				764D23AA1CAA5901004EF93B /* LaunchScreen.xib */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
-				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
 			name = DogShow;
@@ -292,7 +303,9 @@
 			isa = PBXGroup;
 			children = (
 				76C490DA1C98A6E30097C489 /* Lato-Light.ttf */,
+				764D23AD1CAA5A8C004EF93B /* Pacifico.ttf */,
 				76C490DB1C98A6E30097C489 /* Pacifico.ttf */,
+				76A88C4B1CAA70BA0010AEE5 /* Default-568h@2x.png */,
 				13B07FAE1A68108700A75B9A /* DogShow */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* DogShowTests */,
@@ -507,6 +520,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				764D23AF1CAA5AD3004EF93B /* Pacifico.ttf in Resources */,
+				764D23B01CAA5C93004EF93B /* Lato-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,10 +529,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				764D23B21CAA6017004EF93B /* DogShowTitle.png in Resources */,
+				764D23AC1CAA5901004EF93B /* LaunchScreen.xib in Resources */,
+				764D23AE1CAA5A8C004EF93B /* Pacifico.ttf in Resources */,
 				76C490DC1C98A6E30097C489 /* Lato-Light.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				76A88C4C1CAA70BA0010AEE5 /* Default-568h@2x.png in Resources */,
 				76C490DD1C98A6E30097C489 /* Pacifico.ttf in Resources */,
-				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,13 +587,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		13B07FB11A68108700A75B9A /* LaunchScreen.xib */ = {
+		764D23AA1CAA5901004EF93B /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				13B07FB21A68108700A75B9A /* Base */,
+				764D23AB1CAA5901004EF93B /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = DogShow;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -625,7 +642,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Naseem Al-Naji (62SJAU4AN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEAD_CODE_STRIPPING = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -635,8 +653,9 @@
 				INFOPLIST_FILE = DogShow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = DogShow;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -645,7 +664,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Naseem Al-Naji (62SJAU4AN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -654,8 +674,9 @@
 				INFOPLIST_FILE = DogShow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = DogShow;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -14,7 +14,7 @@ const RankScreenCSS = StyleSheet.create({
   },
   
   orTextWrapper: {
-    top: 85,
+    top: 90,
     bottom: 0,
     left: 0,
     right: 0,
@@ -24,13 +24,8 @@ const RankScreenCSS = StyleSheet.create({
   },
 
   defaultText: {
-    backgroundColor: "#9E7BFF",
-    padding: 10,
-    borderRadius: 22,
-    color: 'white',
-    fontFamily: 'Lato',
-    fontSize: 20,
-    overflow: 'hidden',
+    height: 60,
+    width: 60
   },
 });
 

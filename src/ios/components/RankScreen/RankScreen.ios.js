@@ -5,6 +5,7 @@ import React, {
   Component,
   TouchableWithoutFeedback,
   Text,
+  Image,
   View
 } from 'react-native';
 
@@ -30,19 +31,21 @@ class RankScreen extends Component {
   vote(e) {
     const { state, actions } = this.props;
     const { dog1, dog2 } = state.rankScreen;
-    var middle = 85 + .5 * (Dimensions.get('window').height - 85);
+    var middle = 90 + .5 * (Dimensions.get('window').height - 85);
 
-    if (e.nativeEvent.pageY <= middle) {
-      //Action: Select top dog as winner
-      actions.rivalVote(dog1, dog2);
-      
-    } else {
-      //Action: Select bottom dog as winner
-      actions.rivalVote(dog2, dog1);
-    }
+    if (dog1 != null && dog2 != null) {
+      if (e.nativeEvent.pageY <= middle) {
+        //Action: Select top dog as winner
+        actions.rivalVote(dog1, dog2);
+        
+      } else {
+        //Action: Select bottom dog as winner
+        actions.rivalVote(dog2, dog1);
+      }
 
     //Action: Get new dogs
-    actions.fetchRivals();
+      actions.fetchRivals();
+    }
   }
 
   render() {
@@ -56,7 +59,7 @@ class RankScreen extends Component {
           <DogView dog={dog2}></DogView>
         <TouchableWithoutFeedback onPress={this.vote.bind(this)} style={styles.orTextWrapper}>
           <View style={styles.orTextWrapper}>
-          <Text style={styles.defaultText}>OR</Text>
+            <Image style={styles.defaultText} source={require('./circle_or.png')}/>
           </View>
         </TouchableWithoutFeedback>
       </View>
