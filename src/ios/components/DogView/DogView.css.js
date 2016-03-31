@@ -9,22 +9,23 @@ const DogViewCSS = StyleSheet.create({
     flex: .5,
   },
 
+  loadingDogView: {
+    flex: .5,
+    justifyContent: 'center',
+  },
+
+  loadingDogText: {
+    color: '#9E7BFF',
+    marginLeft: 150,
+    fontFamily: 'Pacifico',
+    fontSize: 35,
+  },
+
   rankNumber: {
-    borderRadius: 25,
-    width: 50,
-    height: 50,
+    width: 60,
+    height: 60,
     padding:10,
     margin: 15,
-
-    overflow: 'hidden',
-    backgroundColor: '#9E7BFF',
-    borderWidth: 0,
-    borderColor: 'black',
-    textAlign: 'center',
-    color: 'white',
-
-    fontSize: 25,
-    fontFamily: 'Lato-Light',
   },
 });
 
