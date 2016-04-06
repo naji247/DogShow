@@ -66,9 +66,7 @@ export function rivalVote(winner, loser) {
         dispatch(updateRival(winner)),
         dispatch(updateRival(loser))
     ]).then(() => {
-      console.log("Successfully voted.");
     }).catch((error) => {
-      console.log(error);
     });
   }
 }
@@ -84,9 +82,7 @@ export function updateRival(dog) {
       body: JSON.stringify(dog)})
       .then(response => response.json())
       .then(json => {
-        console.log("Successfully updated dog.");
       }).catch( (error) => {
-        console.log("Failed to updated dog.");
       });
   }
 }

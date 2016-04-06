@@ -12,13 +12,14 @@ const DogViewCSS = StyleSheet.create({
   loadingDogView: {
     flex: .5,
     justifyContent: 'center',
+    alignItems: 'center'
   },
 
   loadingDogText: {
     color: '#9E7BFF',
-    marginLeft: 150,
     fontFamily: 'Pacifico',
     fontSize: 35,
+    width: 170
   },
 
   rankNumber: {

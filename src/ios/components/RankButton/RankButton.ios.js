@@ -28,9 +28,9 @@ var RankButton = React.createClass({
             onPress={this.buttonPressed}>
             <View>
               { this.props.hide == true ? [
-                  <View style={styles.rankPawPrint}></View>
+                  <View key="0" style={styles.rankPawPrint}></View>
               ] : [
-                  <Image style={styles.rankPawPrint}
+                  <Image key="1" style={styles.rankPawPrint}
                   resizeMode='contain'
                   source={require('./paw_print.png')} ></Image>
                 ] }
