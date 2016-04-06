@@ -16,7 +16,9 @@ var styles = require('./LeaderButton.css.js');
 
 var LeaderButton = React.createClass({
   buttonPressed: function() {
-    Actions.LeaderScreen();
+    if (this.props.hide != true ) {
+      Actions.LeaderScreen();
+    }
   },
 
   render: function() {
@@ -28,9 +30,9 @@ var LeaderButton = React.createClass({
             onPress={this.buttonPressed}>
             <View>
               { this.props.hide == true ? [
-                  <View style={styles.leaderBoardRibbon}></View>
+                  <View key="3" style={styles.leaderBoardRibbon}></View>
               ] : [
-                  <Image style={styles.leaderBoardRibbon}
+                  <Image key="2" style={styles.leaderBoardRibbon}
                   resizeMode='contain'
                   source={require('./ribbon.png')} ></Image>
                 ] }
