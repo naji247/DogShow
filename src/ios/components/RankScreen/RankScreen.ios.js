@@ -15,7 +15,7 @@ import { connect } from 'react-redux';
 
 var TitleView = require('../TitleView/TitleView.ios.js');
 var LeaderButton = require('../LeaderButton/LeaderButton.ios.js');
-var DogView = require('../DogView/DogView');
+var DogView = require('../DogView/DogView.ios.js');
 var styles = require('./RankScreen.css.js');
 
 class RankScreen extends Component {
