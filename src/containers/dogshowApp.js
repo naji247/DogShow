@@ -6,8 +6,8 @@ import { Provider } from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as rankScreenActions from '../actions/rankScreenActions.js';
 
-import RankScreen from '../components/RankScreen/RankScreen.ios.js';
-import LeaderScreen from '../components/LeaderScreen/LeaderScreen.ios.js';
+import RankScreen from '../components/RankScreen/RankScreen.js';
+import LeaderScreen from '../components/LeaderScreen/LeaderScreen.js';
 
 import {Scene, Router, Schema, Actions} from 'react-native-router-flux'
 import { connect } from 'react-redux';

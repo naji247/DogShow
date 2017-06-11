@@ -13,9 +13,9 @@ import {bindActionCreators} from 'redux';
 import * as rankScreenActions from '../../actions/rankScreenActions.js';
 import { connect } from 'react-redux';
 
-var TitleView = require('../TitleView/TitleView.ios.js');
-var LeaderButton = require('../LeaderButton/LeaderButton.ios.js');
-var DogView = require('../DogView/DogView.ios.js');
+var TitleView = require('../TitleView/TitleView.js');
+var LeaderButton = require('../LeaderButton/LeaderButton.js');
+var DogView = require('../DogView/DogView.js');
 var styles = require('./RankScreen.css.js');
 
 class RankScreen extends Component {

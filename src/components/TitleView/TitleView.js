@@ -7,8 +7,8 @@ import React, {
   View
 } from 'react-native';
 
-var LeaderButton = require('../LeaderButton/LeaderButton.ios.js');
-var RankButton = require('../RankButton/RankButton.ios.js');
+var LeaderButton = require('../LeaderButton/LeaderButton.js');
+var RankButton = require('../RankButton/RankButton.js');
 var styles = require('./TitleView.css.js');
 
 class TitleView extends Component {

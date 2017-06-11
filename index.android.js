@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react-native';
-import DogShow from './src/ios/containers/app.js';
+import DogShow from './src/containers/app.js';
 
 var {
     AppRegistry
